@@ -1,0 +1,470 @@
+{
+  "name": "SRL_DC",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-3ffe7a84fe73",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC1il/GXxbLYN+i5ENGVMRg0/GpLqVriWN27h/iuHEMs2FphrdqCwSH7R4Mu+sO3qVId5bTOnTTVu6b6SlBYpSSxG8NWG29S1IuPuRnidsD5IJnYINpn7BMX4+PFNfhdicqMyFyGImgvS+6vCrMkp9Urzj2PKhSS1gwlDJm4JtBUDXJC5hq31PDfeoziuFAfq9VWuqmrW7DTGjfMv1EBtKabuL/ysNJArcuTYvs2ep/4Ap2Mc/BwtBSpUpa4actycN+EAu42asYEszZ9iM73DDqhbhweWuEQPvyw0Uj1qlmLKc17ZaiA3pSlGCI/d/W0wMJj5dcn9Hx4S2Gkvq6ePS5mvhlueLef8K2p2DoJLJsaxc/Zl4qetx05T82wIjv4eDhsCWt9UbovlDKWhZaxKaT2GQkoWkPqZuA+EYBneoawR1ds7Q8EsIYuJ+JyPv17HxVuy4yba8DxXeji3vdxuOG0N/jFV1isdwQYnHFQmh/oMA34DNBHQvlNL1buFYQeN8="],
+  "nodes": {
+    "gnmic": {
+      "index": "0",
+      "shortname": "gnmic",
+      "longname": "gnmic",
+      "fqdn": "gnmic.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/gnmic",
+      "kind": "linux",
+      "image": "ghcr.io/openconfig/gnmic",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.35",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::23",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/gnmic",
+        "clab-node-longname": "gnmic",
+        "clab-node-name": "gnmic",
+        "clab-node-type": "linux",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 9274,
+          "port": 9274,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 9274,
+          "port": 9274,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "grafana": {
+      "index": "1",
+      "shortname": "grafana",
+      "longname": "grafana",
+      "fqdn": "grafana.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/grafana",
+      "kind": "linux",
+      "image": "grafana/grafana",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.40",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::28",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/grafana",
+        "clab-node-longname": "grafana",
+        "clab-node-name": "grafana",
+        "clab-node-type": "linux",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 3000,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 3005,
+          "port": 3005,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 3005,
+          "port": 3005,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h1-100": {
+      "index": "2",
+      "shortname": "h1-100",
+      "longname": "h1-100",
+      "fqdn": "h1-100.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/h1-100",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.34",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::22",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/h1-100",
+        "clab-node-longname": "h1-100",
+        "clab-node-name": "h1-100",
+        "clab-node-type": "linux",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "h1-101": {
+      "index": "3",
+      "shortname": "h1-101",
+      "longname": "h1-101",
+      "fqdn": "h1-101.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/h1-101",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.41",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::29",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/h1-101",
+        "clab-node-longname": "h1-101",
+        "clab-node-name": "h1-101",
+        "clab-node-type": "linux",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "l1": {
+      "index": "4",
+      "shortname": "l1",
+      "longname": "l1",
+      "fqdn": "l1.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/l1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.38",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::26",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:ed:04:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/l1",
+        "clab-node-longname": "l1",
+        "clab-node-name": "l1",
+        "clab-node-type": "ixrd3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+      ]
+    },
+    "l2": {
+      "index": "5",
+      "shortname": "l2",
+      "longname": "l2",
+      "fqdn": "l2.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/l2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.33",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::21",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:1a:05:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/l2",
+        "clab-node-longname": "l2",
+        "clab-node-name": "l2",
+        "clab-node-type": "ixrd3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+      ]
+    },
+    "prometheus": {
+      "index": "6",
+      "shortname": "prometheus",
+      "longname": "prometheus",
+      "fqdn": "prometheus.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/prometheus",
+      "kind": "linux",
+      "image": "quay.io/prometheus/prometheus",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.39",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::27",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/prometheus",
+        "clab-node-longname": "prometheus",
+        "clab-node-name": "prometheus",
+        "clab-node-type": "linux",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 9090,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 9091,
+          "port": 9091,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 9091,
+          "port": 9091,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "s1": {
+      "index": "7",
+      "shortname": "s1",
+      "longname": "s1",
+      "fqdn": "s1.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/s1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.36",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::24",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:d1:07:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/s1",
+        "clab-node-longname": "s1",
+        "clab-node-name": "s1",
+        "clab-node-type": "ixrd3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+      ]
+    },
+    "s2": {
+      "index": "8",
+      "shortname": "s2",
+      "longname": "s2",
+      "fqdn": "s2.SRL_DC.io",
+      "group": "",
+      "labdir": "/home/ashakra/training/clab-SRL_DC/s2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.37",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::25",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:fa:08:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3ffe7a84fe73",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/home/ashakra/training/clab-SRL_DC/s2",
+        "clab-node-longname": "s2",
+        "clab-node-name": "s2",
+        "clab-node-type": "ixrd3l",
+        "clab-owner": "ashakra",
+        "clab-topo-file": "/home/ashakra/training/srldc.yml",
+        "containerlab": "SRL_DC"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:90:62:8a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l1",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:de:30:b2",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s1",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:ab:a1:92",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:e7:b1:15",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-1",
+          "mac": "aa:c1:ab:94:0f:aa",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l1",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:c2:be:90",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "s2",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:c1:f6:9a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "l2",
+          "interface": "e1-2",
+          "mac": "aa:c1:ab:80:b5:af",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l1",
+          "interface": "e1-5",
+          "mac": "aa:c1:ab:be:27:dc",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h1-100",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:2f:e1:b6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "l1",
+          "interface": "e1-6",
+          "mac": "aa:c1:ab:8c:6c:0d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "h1-101",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:cd:c6:31",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

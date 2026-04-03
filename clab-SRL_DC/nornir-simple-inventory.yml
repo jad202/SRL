@@ -1,0 +1,46 @@
+---
+gnmic:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.35
+grafana:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.40
+h1-100:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.34
+h1-101:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.41
+prometheus:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.39
+l1:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.38
+l2:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.33
+s1:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.36
+s2:
+    username: admin
+    password: NokiaSrl1!
+    platform: srl
+    hostname: 172.20.20.37
